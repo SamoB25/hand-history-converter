@@ -83,12 +83,6 @@ gulp.task('build-clean', function() {
     .pipe(rimraf());
 });
 
-// copy
-gulp.task('build-copy', ['build-clean'], function () {
-  return gulp.src('app/bower_components/zeroclipboard/dist/ZeroClipboard.swf')
-    .pipe(gulp.dest('dist/scripts'));
-});
-
 // useref
 gulp.task('build-useref', ['build-clean', 'dev-compass'], function () {
   var htmlFilter = filter('**/*.html');
